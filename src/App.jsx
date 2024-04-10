@@ -28,8 +28,10 @@ function App() {
   }
 
   const handleDelete = (e, id) => {
-    
-
+    let newTodos = todos.filter(item=>{
+      return item.id !== id;
+    })
+    setTodos(newTodos);
   }
 
   const handleChange = (e) =>{
